@@ -1,0 +1,23 @@
+//STATE
+A stateful variable is a variable whose value changes over time to reflect changes in your app.
+State is the status of any stateful variables at any given point in time.
+As an example, if you have a variable named buttonClicked with a value of false, and you update it to true after a button has been clicked, then that buttonClicked variable is a stateful variable since it keeps track of changing state.
+Global or application state is used to contain data that is shared between different parts of your application, or obtained from outside of the application, such as from a server or user input.
+In React, state is always stored in the form of a JavaScript object. This can be either a local state object which is maintained in the local scope of a specific component, or it can be a global state object.
+Global state in React is usually handled by a state library such as Redux.
+In React, state is always immutable, meaning that it cannot be mutated (changed). If we want to mutate the state, we must create an entirely new state object using specific functions provided by React, e.g. the useState() hook. 
+When using Redux, global application state is maintained in a store object, which contains the state of the entire application. Since we used the redux template when scaffolding out our nucampsite project using create-react-app, there is already a file named store.js in the nucampsite/src/app/ folder, which we will be using later.
+Also with Redux, reducer functions are used to update the global state. We will learn more about, and implement, reducer functions later when we implement Redux in our app.
+Finally, the logic pertaining to the global data for each feature of our app will be accounted for with a portion of our global state called a slice. This allows us to organize the global state into more manageable chunks. We will implement our first slice in the following exercise, for the campsites feature. 
+
+
+
+//HOOKS
+The reason for this is that React only re-renders a component when a variable that is explicitly made a part of React's state changes. React isn't tracking this selectedCampsite variable, so no new snapshot is being created and no new render is occurring.
+Hooks are special functions provided by React that let us use React features, such as React state and lifecycle methods, inside function components.
+There is one other type of component in React called class components. Hooks cannot be used inside class components, only function components.
+Two of the most commonly used React hooks are called useState() and useEffect().
+The useState() hook lets us hook into React state to add local state. 
+The useEffect() hook lets us hook into React's lifecycle methods. You will learn more about these later.
+We can also write custom hooks, that let us create logic that we can re-use in multiple components.
+Third-party React component libraries often use custom hooks.

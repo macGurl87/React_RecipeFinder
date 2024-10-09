@@ -53,13 +53,28 @@ h3,
 	font-size: 1.25rem;
 }
 
-h2 {
+/* h2 {
 	color: #3046c5;
-}
+} */
 
 .card-img-overlay .card-title {
 	color: white;
 	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.landing-page {
+	color: white;
+	/* background: #37387a; */
+	background-image: url('./app/assets/img/Foodie.png');
+	height: 100vh;
+	/* padding-top: 20vh; */
+	/* text-align: center; */
+	/* position: relative;
+	z-index: 1; */
+	overflow: hidden;
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
 }
 
 .row-content {
@@ -71,7 +86,7 @@ h2 {
 .site-footer {
 	background-image: linear-gradient(#cec8ff, white);
 	padding: 20px 0;
-	margin-top: 2rem;
+	/* margin-top: 4rem; */
 }
 
 .navbar-brand {
@@ -80,19 +95,16 @@ h2 {
 }
 
 .navbar-brand img {
-	width: 275%;
-	height: 100%;
-	margin-right: 2rem;
-	max-width: 10rem;
+	margin-right: 1rem;
+	max-width: 6rem;
 }
 
 .navbar-dark {
 	background-color: #901cad;
 	background-image: linear-gradient(to right, #37c1dd, #3046c5, #212622);
 	/* #65e277 */
-	margin-bottom: 2rem;
+	/* margin-bottom: 2rem; */
 	min-height: 7rem;
-	/* max-height:  */
 }
 
 .page-enter {

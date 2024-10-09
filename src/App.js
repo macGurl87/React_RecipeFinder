@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import RecipeBlog from './pages/RecipeBlog';
 import {Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -13,10 +14,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={<HomePage />} />
 				<Route path='aboutpage' element={<AboutPage />} />
-				{/* <Route path='contact' element={<ContactPage />} />
-				<Route path='directory' element={<CampsitesDirectoryPage />} />
-				<Route path='about' element={<AboutPage />} />
-				<Route path='directory/:campsiteId' element={<CampsiteDetailPage />} /> */}
+				<Route path='recipeblog' element={<RecipeBlog />} />
 			</Routes>
 			<Footer />
 		</div>

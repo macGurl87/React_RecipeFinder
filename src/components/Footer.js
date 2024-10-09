@@ -1,6 +1,6 @@
 import {Container, Row, Col} from 'reactstrap';
 import {Link} from 'react-router-dom';
-
+//Adjust Footer alignment to page
 const Footer = () => {
 	return (
 		<footer className='site-footer'>
@@ -16,10 +16,10 @@ const Footer = () => {
 								<Link to='/aboutpage'>About</Link>
 							</li>
 							<li>
-								<Link to='/recipefinder'>Recipe Finder</Link>
+								<Link to='/recipefinder'>Xcipe Finder</Link>
 							</li>
 							<li>
-								<Link to='/recipeblog'>Recipe Blog</Link>
+								<Link to='/recipeblog'>Xcipe Blog</Link>
 							</li>
 						</ul>
 					</Col>
@@ -60,7 +60,7 @@ const Footer = () => {
 							className='btn btn-link'
 							href='mailto:notreal@notreal.co'
 						>
-							<i className='fa fa-envelope-o' /> digin@foodielover.co
+							<i className='fa fa-envelope-o' /> digin@foodlover.com
 						</a>
 					</Col>
 				</Row>

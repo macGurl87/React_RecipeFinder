@@ -1,5 +1,6 @@
 const HomePage = () => {
-	return <div>HomePage</div>;
+	// Importing background image from App.css with className
+	return <div className='landing-page'></div>;
 };
 
 export default HomePage;

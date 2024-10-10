@@ -1,39 +1,39 @@
-import {
-	Card,
-	CardImg,
-	CardTitle,
-	CardImgOverlay,
-	CardBody,
-	Button,
-} from 'reactstrap';
+import {Card, CardImg, CardTitle, CardBody, Button} from 'reactstrap';
 // import {RECIPES} from '../../app/shared/RECIPES';
 // import {Link} from 'react-router-dom';
 
 const RecipeCard = (props) => (
 	<>
-		<Card>
+		<Card
+			className='my-2'
+			style={{
+				height: '400px',
+				width: '18rem',
+			}}
+		>
 			<CardImg
-				width='100%'
+				top
 				// style={{
-				// 	width: '18rem',
+				// 	height: '18rem',
 				// }}
 				src={props.recipe.image}
 				alt={props.recipe.name}
 			/>
-			<CardImgOverlay>
-				<CardTitle
-					style={{
-						color: 'white',
-						backgroundColor: 'black',
-						opacity: '.5',
-					}}
-				>
-					{props.recipe.name}
-				</CardTitle>
-			</CardImgOverlay>
+
+			<CardTitle
+				className='card-title'
+				style={{
+					color: 'white',
+					backgroundColor: 'black',
+					opacity: '.5',
+				}}
+			>
+				{props.recipe.name}
+			</CardTitle>
+
 			<CardBody> {props.recipe.description}</CardBody>
 		</Card>
-		<Button onClick='' block='true'>
+		<Button size='sm' onClick='' block='true'>
 			Full Recipe
 		</Button>
 	</>

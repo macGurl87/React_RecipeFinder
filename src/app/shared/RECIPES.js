@@ -2,9 +2,22 @@ import jerkChickenImg from '../assets/img/JerkChicken.png';
 import harvestFestivalImg from '../assets/img/HarvestFestival_2023.JPG';
 import homemadeRanchImg from '../assets/img/Ranch.jpg';
 import jamaicanCabbageImg from '../assets/img/JamaicanCabbage.jpg';
+import pizzaBooImg from '../assets/img/pizza-boo.jpg';
+import pizzaImg from '../assets/img/Pizza.jpg';
+
 const RECIPES = [
 	{
 		id: 0,
+		name: 'PizzaBoo',
+		image: pizzaBooImg,
+		cuisine: 'Italian/American',
+		featured: false,
+		description: 'Pizza Pizza !',
+		ingredients: '',
+		instruction_details: 'may or maynot be added here',
+	},
+	{
+		id: 1,
 		name: 'Jerk Chicken',
 		image: jerkChickenImg,
 		cuisine: 'jamaican',
@@ -15,7 +28,7 @@ const RECIPES = [
 		instruction_details: 'may or maynot be added here',
 	},
 	{
-		id: 1,
+		id: 2,
 		name: 'Jamaican Steamed Cabbage',
 		image: jamaicanCabbageImg,
 		cusine: 'Jamaican',
@@ -27,7 +40,7 @@ const RECIPES = [
 		instruction_details: 'may or maynot be added here',
 	},
 	{
-		id: 2,
+		id: 3,
 		name: 'Grilled Cheese',
 		image: harvestFestivalImg,
 		cusine: 'American',
@@ -39,7 +52,7 @@ const RECIPES = [
 		instruction_details: 'may or maynot be added here',
 	},
 	{
-		id: 3,
+		id: 4,
 		name: 'Homemade Ranch',
 		image: homemadeRanchImg,
 		cusine: 'American',
@@ -51,9 +64,9 @@ const RECIPES = [
 		instruction_details: 'may or maynot be added here',
 	},
 	{
-		id: 4,
+		id: 5,
 		name: 'Campground Chili',
-		// image: campgroundChiliImg,
+		image: pizzaImg,
 		ecusine: 'keeping warm',
 		featured: true,
 		description:

@@ -1,42 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-} */
 body {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -49,17 +10,8 @@ h3,
 }
 
 .card-title {
-	font-weight: 500;
-	font-size: 1.25rem;
-}
-
-/* h2 {
-	color: #3046c5;
-} */
-
-.card-img-overlay .card-title {
-	color: white;
-	background-color: rgba(0, 0, 0, 0.5);
+	font-weight: 400;
+	font-size: 1.2rem;
 }
 
 .landing-page {

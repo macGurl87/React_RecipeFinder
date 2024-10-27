@@ -13,10 +13,10 @@ const Footer = () => {
 								<Link to='/'>Home</Link>
 							</li>
 							<li>
-								<Link to='/aboutpage'>About</Link>
+								<Link to='/about'>About</Link>
 							</li>
 							<li>
-								<Link to='/recipefinder'>Xcipe Finder</Link>
+								<Link to='/recipesearch'>Xcipe Search</Link>
 							</li>
 							<li>
 								<Link to='/recipeblog'>Xcipe Blog</Link>
@@ -25,24 +25,28 @@ const Footer = () => {
 					</Col>
 					<Col xs='6' sm='3' className='text-center'>
 						<h5>Social</h5>
+						{/* Make links OPEN A NEW TAB or WINDOW and not direct flow off of your page */}
 						<a
 							className='btn btn-social-icon btn-instagram'
 							href='http://instagram.com/'
 						>
 							<i className='fa fa-instagram' />
 						</a>{' '}
+						{/* Make links OPEN A NEW TAB or WINDOW and not direct flow off of your page */}
 						<a
 							className='btn btn-social-icon btn-facebook'
 							href='http://www.facebook.com/'
 						>
 							<i className='fa fa-facebook' />
 						</a>{' '}
+						{/* Make links OPEN A NEW TAB or WINDOW and not direct flow off of your page */}
 						<a
 							className='btn btn-social-icon btn-twitter'
 							href='http://twitter.com/'
 						>
 							<i className='fa fa-twitter' />
 						</a>{' '}
+						{/* Make links OPEN A NEW TAB or WINDOW and not direct flow off of your page */}
 						<a
 							className='btn btn-social-icon btn-google'
 							href='http://youtube.com/'

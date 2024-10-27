@@ -1,21 +1,23 @@
-import {Card, CardImg, CardTitle, CardBody, Button} from 'reactstrap';
+import {Card, CardTitle, CardBody, Button} from 'reactstrap';
 // import {RECIPES} from '../../app/shared/RECIPES';
 // import {Link} from 'react-router-dom';
 
-const RecipeCard = (props) => (
+const RecipeCard = (props, handleButtonClick) => (
 	<>
 		<Card
 			className='my-2'
 			style={{
-				height: '400px',
+				height: '500px',
 				width: '18rem',
 			}}
 		>
-			<CardImg
+			{/* Compare CardImg to Img and <img/> to <image> although i do believe it is the <img> tag in React and RNative */}
+			<img
 				top
-				// style={{
-				// 	height: '18rem',
-				// }}
+				style={{
+					height: '14rem',
+					width: '100%',
+				}}
 				src={props.recipe.image}
 				alt={props.recipe.name}
 			/>
@@ -26,16 +28,20 @@ const RecipeCard = (props) => (
 					color: 'white',
 					backgroundColor: 'black',
 					opacity: '.5',
+					textAlign: 'center',
 				}}
 			>
 				{props.recipe.name}
 			</CardTitle>
 
-			<CardBody> {props.recipe.description}</CardBody>
+			<CardBody>
+				{' '}
+				{props.recipe.description}
+				<Button style={{backgroundColor: '#000'}} size='sm' block='true'>
+					Full Recipe
+				</Button>
+			</CardBody>
 		</Card>
-		<Button size='sm' onClick='' block='true'>
-			Full Recipe
-		</Button>
 	</>
 );
 

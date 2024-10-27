@@ -12,7 +12,7 @@ const RECIPES = [
 		image: pizzaBooImg,
 		cuisine: 'Italian/American',
 		featured: false,
-		description: 'Pizza Pizza !',
+		description: 'Pizza Pizza! Boo..More Pizza Pizza, BOO :{}',
 		ingredients: '',
 		instruction_details: 'may or maynot be added here',
 	},

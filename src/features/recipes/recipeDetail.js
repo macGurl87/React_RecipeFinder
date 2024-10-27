@@ -1,21 +1,8 @@
 import {Card, CardImg, CardText, CardBody, Col} from 'reactstrap';
+import React from 'react';
 
-// const CampsiteDetail = ({recipe}) => {
-// 	const {image, name} = recipe;
-
-// 	return (
-// 		<Col md='12' className='m-4'>
-// 			<Card>
-// 				<CardImg top src={image} alt={name} />
-// 				<CardBody></CardBody>
-// 			</Card>
-// 		</Col>
-// 	);
-// };
-
-// export default CampsiteDetail;
 export const RecipeDetail = (recipe) => {
-	const {image, name, description, } = recipe; //destructurings a variable name
+	const {image, name, description} = recipe; //destructurings a variable name
 
 	return (
 		<Col md='5' className='m-1'>
@@ -28,5 +15,3 @@ export const RecipeDetail = (recipe) => {
 		</Col>
 	);
 };
-
-

@@ -38,9 +38,9 @@ const Header = () => {
 						</NavLink>
 					</NavItem>
 					<NavItem>
-						<NavLink className='nav-link' to='/xfinder'>
+						<NavLink className='nav-link' to='/recipesearch'>
 							{/* <i className='fa fa-list fa-lg' /> */}
-							Xcipe Finder
+							Xcipe Search
 						</NavLink>
 					</NavItem>
 					<NavItem>

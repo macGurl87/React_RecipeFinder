@@ -1,132 +1,3 @@
-// import recipeFetch from '../features/recipeApi/recipesFetch';
-// import React, {useState, useEffect} from 'react';
-
-// const RecipeSearch = () => {
-// 	const [searchTerm, setSearchTerm] = useState('');
-// 	// const [recipes, setRecipes] = useState([]);
-// 	// const [error, setError] = useState(null);
-
-// 	const app_id = process.env.REACT_APP_EDAMAN_API_ID;
-// 	const app_key = process.env.REACT_APP_EDAMAN_API_KEY;
-
-// 	useEffect(() => {
-// 		fecthRecipes();
-// 	}, []);
-
-// 	const fecthRecipes = async () => {
-// 		try {
-// 			const response = await fetch(
-// 				`https://api.edamam.com/api/recipes/v2?type=user&q=${searchTerm}&${app_id}&${app_key}`
-// 			);
-// 			const data = await response.json();
-// 			// setRecipes(response.data.hits);
-// 			console.log(data);
-// 		} catch (error) {
-// 			console.error('Error fetching data:', error);
-// 		}
-// 	};
-
-// <>
-// 	<form className='search'>
-// 		<h1> Recipe Search App</h1>
-// 		<input placeholder='Search for recipes...' />
-// 		<button type='submit'></button>
-// 		{/*
-// 		<RecipeSearch /> */}
-// 	</form>
-// 	<div>
-// 		{recipes.map((recipe) => (
-// 			<div key={recipe.recipe.uri}>
-// 				<h3>{recipe.recipe.label}</h3>
-// 				<img src={recipe.recipe.image} alt={recipe.recipe.label} />
-// 			</div>
-// 		))}
-// 	</div>
-// </>;
-// };
-
-// export default RecipeSearch;
-
-// 	if (!response.ok) {
-// throw new Error(`HTTP error! status: ${response.status}`);
-// src/RecipeSearch.js
-
-//DIFFERENT START TO PROJECT with axiosS...was react bootstrap...
-// import React, {useState} from 'react';
-// import axios from 'axios';
-// import {Container, Form, Button, Card, Row, Col} from 'reacstrap';
-
-// const RecipeSearch = () => {
-// 	const [query, setQuery] = useState('');
-// 	const [recipes, setRecipes] = useState([]);
-
-// 	// const APP_ID = 'YOUR_APP_ID';
-// 	// const APP_KEY = 'YOUR_APP_KEY';
-
-// 	const app_id = process.env.REACT_APP_EDAMAN_API_ID;
-// 	const app_key = process.env.REACT_APP_EDAMAN_API_KEY;
-
-// 	const searchRecipes = async (e) => {
-// 		e.preventDefault();
-// 		try {
-// 			const response = await axios.get(
-// 				`https://api.edamam.com/search?q=${query}&app_id=${app_id}&app_key=${app_key}`
-// 			);
-// 			setRecipes(response.data.hits);
-// 		} catch (error) {
-// 			console.error('Error fetching recipes:', error);
-// 		}
-// 	};
-
-// 	return (
-// 		<Container>
-// 			<h1 className='my-4'>Recipe Search</h1>
-// 			<Form onSubmit={searchRecipes}>
-// 				<Form.Group controlId='formBasicEmail'>
-// 					<Form.Control
-// 						type='text'
-// 						placeholder='Enter recipe name'
-// 						value={query}
-// 						onChange={(e) => setQuery(e.target.value)}
-// 					/>
-// 				</Form.Group>
-// 				<Button variant='primary' type='submit'>
-// 					Search
-// 				</Button>
-// 			</Form>
-
-// 			<Row className='mt-4'>
-// 				{recipes.map((recipeData, index) => (
-// 					<Col key={index} sm={12} md={6} lg={4}>
-// 						<Card className='mb-4'>
-// 							<Card.Img variant='top' src={recipeData.recipe.image} />
-// 							<Card.Body>
-// 								<Card.Title>{recipeData.recipe.label}</Card.Title>
-// 								<Card.Text>
-// 									<strong>Calories:</strong>{' '}
-// 									{Math.round(recipeData.recipe.calories)}
-// 									<br />
-// 									<strong>Diet Labels:</strong>{' '}
-// 									{recipeData.recipe.dietLabels.join(', ')}
-// 								</Card.Text>
-// 								<Button
-// 									variant='primary'
-// 									href={recipeData.recipe.url}
-// 									target='_blank'
-// 								>
-// 									View Recipe
-// 								</Button>
-// 							</Card.Body>
-// 						</Card>
-// 					</Col>
-// 				))}
-// 			</Row>
-// 		</Container>
-// 	);
-// };
-
-// export default RecipeSearch;
-// src/RecipeSearch.js
 import React, {useState} from 'react';
 import axios from 'axios';
 import {
@@ -153,6 +24,9 @@ const RecipeSearch = () => {
 	const fetchRecipes = async () => {
 		setLoading(true);
 		try {
+			// The Edamam B2B API is accessed by sending HTTPS requests on specific URLs as described below. The base URL is https://api.edamam.com, and you obtain the full URL by appending request’s path to the base URL, for example, https://api.edamam.com/search. Found here: https://developer.edamam.com/edamam-docs-recipe-api-v1
+
+			// const response = await fetch(`https://api.edamam.com/search`, { need to add async to make await code work with fetch
 			const response = await axios.get(`https://api.edamam.com/search`, {
 				params: {
 					q: query,
@@ -170,6 +44,7 @@ const RecipeSearch = () => {
 		}
 	};
 
+	//Button Submit on Form for Action to fetch recipes
 	const handleSearch = (e) => {
 		e.preventDefault();
 		fetchRecipes();

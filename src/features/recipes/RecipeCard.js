@@ -1,53 +1,94 @@
-import {Card, CardTitle, CardBody, Button} from 'reactstrap';
-// import {RECIPES} from '../../app/shared/RECIPES';
-// import {Link} from 'react-router-dom';
+import {useState} from 'react';
+import {
+	Button,
+	Card,
+	CardBody,
+	CardTitle,
+	Modal,
+	ModalHeader,
+	ModalBody,
+	ModalFooter,
+} from 'reactstrap';
 
-const RecipeCard = (props, handleButtonClick) => (
-	<>
-		<Card
-			className='my-2'
-			style={{
-				height: '500px',
-				width: '18rem',
-			}}
-		>
-			{/* Compare CardImg to Img and <img/> to <image> although i do believe it is the <img> tag in React and RNative */}
-			<img
-				top
-				style={{
-					height: '14rem',
-					width: '100%',
-				}}
-				src={props.recipe.image}
-				alt={props.recipe.name}
-			/>
+const RecipeCard = (props, ...args) => {
+	const [modal, setModal] = useState(false);
 
-			<CardTitle
-				className='card-title'
+	const toggle = () => setModal(!modal);
+
+	return (
+		<>
+			<Card
+				className='my-2'
 				style={{
-					color: 'white',
-					backgroundColor: 'black',
-					opacity: '.5',
-					textAlign: 'center',
+					height: '500px',
+					width: '18rem',
 				}}
 			>
-				{props.recipe.name}
-			</CardTitle>
+				<img
+					top
+					style={{
+						height: '14rem',
+						width: '100%',
+					}}
+					alt='description'
+					src={props.recipe.image}
+				></img>
+				<CardTitle
+					className='card-title my-1'
+					style={{
+						color: 'white',
+						backgroundColor: 'blue',
+						opacity: '.5',
+						textAlign: 'center',
+					}}
+				>
+					{props.recipe.name}
+				</CardTitle>
 
-			<CardBody>
-				{' '}
-				{props.recipe.description}
-				<Button style={{backgroundColor: '#000'}} size='sm' block='true'>
+				<CardBody> {props.recipe.description}</CardBody>
+				<Button
+					style={{backgroundColor: '#000'}}
+					size='sm'
+					block='true'
+					onClick={toggle}
+				>
 					Full Recipe
 				</Button>
-			</CardBody>
-		</Card>
-	</>
-);
+			</Card>
+
+			<Modal isOpen={modal} xl toggle={toggle} {...args}>
+				<img
+					top
+					scrollable
+					style={{
+						height: '22rem',
+						width: '100%',
+					}}
+					alt='description'
+					src={props.recipe.image}
+				></img>
+				<ModalHeader toggle={toggle}>{props.recipe.name}</ModalHeader>
+				<ModalBody>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</ModalBody>
+
+				<ModalFooter>
+					<Button color='primary' onClick={toggle}>
+						Save Recipe
+					</Button>{' '}
+					<Button color='secondary' onClick={toggle}>
+						Cancel
+					</Button>
+				</ModalFooter>
+			</Modal>
+		</>
+	);
+};
 
 export default RecipeCard;
-
-// The concept of "rendering" a component is more or less similar to the concept of invoking/calling a function, versus defining a component/function. It is when the component is actually used to create the application in the browser by putting its name inside < > tags, versus being defined to be used at a later time.
-
-// The destructuring assignment syntax is a way to unpack properties from objects and arrays into discrete variables.
-// To destructure an object in JavaScript, we list the keys in curly braces, and assign them to the object name.

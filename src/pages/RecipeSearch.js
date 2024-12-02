@@ -57,12 +57,13 @@ const RecipeSearch = () => {
 
 				<Col>
 					<img
+						className='my-3'
 						style={{
 							height: '14rem',
 							width: '14rem',
 						}}
 						src={CarrotTopImg}
-						alt='description'
+						alt='pic of cool carrot'
 					/>
 				</Col>
 
@@ -75,9 +76,11 @@ const RecipeSearch = () => {
 							onChange={(e) => setQuery(e.target.value)}
 						/>
 						<Button
+							className='my-3'
 							type='submit'
 							style={{width: '14rem', flex: 1}}
-							color='primary'
+							// change button color
+							color='dark grey'
 							disabled={loading}
 						>
 							{loading ? 'Searching...' : 'Search'}

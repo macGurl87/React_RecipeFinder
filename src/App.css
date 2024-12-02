@@ -19,10 +19,6 @@ h3,
 	/* background: #37387a; */
 	background-image: url('./app/assets/img/Foodie.png');
 	height: 100vh;
-	/* padding-top: 20vh; */
-	/* text-align: center; */
-	/* position: relative;
-	z-index: 1; */
 	overflow: hidden;
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
@@ -37,8 +33,7 @@ h3,
 
 .site-footer {
 	background-image: linear-gradient(#cec8ff, white);
-	padding: 20px 0;
-	/* margin-top: 4rem; */
+	padding-top: 1rem;
 }
 
 .navbar-brand {

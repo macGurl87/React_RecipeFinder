@@ -1,32 +1,19 @@
-import {
-	Container,
-	Row,
-	Col,
-	Card,
-	CardBody,
-	CardTitle,
-	CardText,
-} from 'reactstrap';
-import HarvestFestivalImg from '../app/assets/img/HarvestFestival_2023.JPG';
+import {Container, Row, Col, Card} from 'reactstrap';
+import myImg from '../app/assets/img/headshot.jpg';
 
 const AboutPage = () => {
 	return (
 		<Container>
 			<Row>
-				<h1 className='text-center my-4'>About Me</h1>
+				<h1 className='text-center my-4'>Bonjour :) </h1>
 
-				<Col>
-					<img
-						style={{
-							height: '18rem',
-							width: '70%',
-						}}
-						src={HarvestFestivalImg}
-						alt='description'
-					/>
+				<Col sm='6' md='4'>
+					<Card className='mb-4'>
+						<img src={myImg} alt='description' />
+					</Card>
 				</Col>
 
-				<Col>
+				<Col style={{backgroundColor: '#FAF9F6'}}>
 					<p>
 						My name is Melissa Carmack and I am a new Gardener, new Food Blogger
 						and new junior Web Developer. Wow, exciting when you write I out,
@@ -37,25 +24,6 @@ const AboutPage = () => {
 						app will let you explore the foodie inside of you. I would love to
 						take you on your Foood Lover's adventure, so again Welcome!
 					</p>
-				</Col>
-			</Row>
-			<Row>
-				<Col sm='6' md='4'>
-					<Card>
-						<CardBody>
-							<CardTitle tag='h5'>Hello About Me</CardTitle>
-							<CardText>
-								{/* think about this link as a button with onclick with the same values??? */}
-								{/* <a
-									href={item.recipe.url}
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									View Recipe
-								</a> */}
-							</CardText>
-						</CardBody>
-					</Card>
 				</Col>
 			</Row>
 		</Container>

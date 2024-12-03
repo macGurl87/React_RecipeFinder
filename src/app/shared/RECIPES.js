@@ -1,9 +1,11 @@
 import jerkChickenImg from '../assets/img/JerkChicken.png';
-import harvestFestivalImg from '../assets/img/HarvestFestival_2023.JPG';
+import grilledImg from '../assets/img/GrilledCheese.jpg';
 import homemadeRanchImg from '../assets/img/Ranch.jpg';
 import jamaicanCabbageImg from '../assets/img/JamaicanCabbage.jpg';
 import pizzaBooImg from '../assets/img/pizza-boo.jpg';
-import pizzaImg from '../assets/img/Pizza.jpg';
+import chiliImg from '../assets/img/Chilli.jpg';
+import burriitoImg from '../assets/img/BeefTips.jpg';
+import chixImg from '../assets/img/ButterChix.jpg';
 
 const RECIPES = [
 	{
@@ -42,7 +44,7 @@ const RECIPES = [
 	{
 		id: 3,
 		name: 'Grilled Cheese',
-		image: harvestFestivalImg,
+		image: grilledImg,
 		cusine: 'American',
 		featured: false,
 		description:
@@ -66,11 +68,29 @@ const RECIPES = [
 	{
 		id: 5,
 		name: 'Campground Chili',
-		image: pizzaImg,
+		image: chiliImg,
 		ecusine: 'keeping warm',
 		featured: true,
 		description:
 			"You'll never want to leave this hidden gem of a recipe behind at your next campnight, scary movie night, or one pot meal night. Cheap ingredients each given the proper attention to come together in a mouthful of wonderful.",
+	},
+	{
+		id: 6,
+		name: 'Butter Chicken',
+		image: chixImg,
+		cusine: 'American',
+		featured: false,
+		description: 'One of Indias popular dishes',
+		ingredients: '',
+	},
+	{
+		id: 7,
+		name: 'Beef tip burrito',
+		image: burriitoImg,
+		ecusine: 'Mexican',
+		featured: true,
+		description:
+			'Simple  stewed beef tips wraped in a tortilla and smothered in a cheese sauce topped pico de gallo',
 	},
 ];
 

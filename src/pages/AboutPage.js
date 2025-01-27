@@ -1,5 +1,6 @@
 import {Container, Row, Col, Card} from 'reactstrap';
 import myImg from '../app/assets/img/headshot.jpg';
+import React from 'react';
 
 const AboutPage = () => {
 	return (

@@ -1,6 +1,7 @@
 import RecipeCard from './RecipeCard';
 import RECIPES from '../../app/shared/RECIPES';
 import {Col, Row, CardGroup} from 'reactstrap';
+import React from 'react';
 
 export const RecipeList = ({recipe}) => {
 	return (

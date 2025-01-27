@@ -1,5 +1,7 @@
 import {Container, Row, Col} from 'reactstrap';
 import {Link} from 'react-router-dom';
+import React from 'react';
+
 //Adjust Footer alignment to page
 const Footer = () => {
 	return (

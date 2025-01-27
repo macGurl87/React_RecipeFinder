@@ -1,0 +1,14 @@
+[33m1a41c20[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m testing
+[33m9554033[m testing deploy
+[33me365dfb[m added start scripts, build file with npm run build and served it using built in webpack (that uses the react-scripts in package.json unitl you want to customize your CRA with a webpaack.config.js file and and scripts-eject
+[33m65dfee3[m updated package.json
+[33m110fb40[m updated package.json
+[33m6608c71[m added images and build file with npm run build
+[33m675900a[m added new recipes (template) to database file
+[33mf00ca10[m Cleaned up styling & added Modal to RecipeCard
+[33m1532184[m cleaner code for RecipeSearch.js file
+[33m13a782a[m Finished the basics for this React Portfolio--need to add Modal to render Blog recipe detail and update images
+[33m607c07d[m Updated Card.js & RecipeCard.js
+[33mbfd6960[m Added new files
+[33m5177396[m First commit with Header, Footer, Navlinks, Links with basic Router/Routes
+[33m77ce65f[m[33m ([m[1;32mmaster[m[33m)[m Initialize project using Create React App
